@@ -1,0 +1,26 @@
+extends layout
+block content
+  h1= title
+  p Welcome to #{title}
+  table.table.table-striped(style='background-color:#f4e9e9')(align='center')
+    thead
+      tr
+        th Employee ID
+        th Employee Name
+        th Joining Date
+        th Manager Emp ID
+        th Salary
+        th Phone Number
+        th Designation
+        th Department
+    tbody
+      each user in data
+        tr
+          td= user[0]
+          td= user[1]
+          td= user[2]
+          td= user[3]
+          td= user[4]
+          td=user[5]
+          td= user[6]
+          td= user[7]

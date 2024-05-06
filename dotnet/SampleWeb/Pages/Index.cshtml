@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<table style="background-color: #ffebcd;">
+    <th>
+        Employee ID
+    </th>
+    <th>
+        Employee Name
+    </th>
+    <th>
+        Employee Salary
+    </th>
+    <th>
+        Employee Department
+    </th>
+    <th>
+        Employee Hire_Date
+    </th>
+        <th>
+        Employee Manager_ID
+    </th>
+    <th>
+        Employee PHONE_NUMBER
+    </th>
+    <th>
+        Employee JOB_ID
+    </th>
+
+    @foreach (var employee in Model.Employees)
+    {
+        <tr>
+            <td>
+                @employee.EmployeeID
+            </td>
+            <td>
+                @employee.Name
+            </td>
+            <td>
+                @employee.Salary
+            </td>
+            <td>
+                @employee.Department_Name
+            </td>
+            <td>
+                @employee.Hire_Date
+            </td>
+            <td>
+                @employee.Manager_ID
+            </td>
+            <td>
+                @employee.PHONE_NUMBER
+            </td>
+            <td>
+                @employee.Job_Id
+            </td>
+
+        </tr>
+    }
+</table>
+</div>
